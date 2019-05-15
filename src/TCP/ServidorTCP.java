@@ -20,7 +20,7 @@ class ServidorTCP{
 		// Abrimos un "Socket de Servidor" TCP en el puerto 1234.
 		ServerSocket ss = null;
 		try{
-			ss = new ServerSocket(1234,0,InetAddress.getByName(null));
+			ss = new ServerSocket(1234,0,InetAddress.getByName("localhost"));
 			System.out.println("Socket: "+ss);
 		}
 		catch (IOException ioe){

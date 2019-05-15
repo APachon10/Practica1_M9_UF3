@@ -3,12 +3,13 @@ package TCP;
 import java.io.*;
 import java.net.*;
 class ClienteTCP{
-	public static void main(String args[]){
+	public static void main(String args[]) throws UnknownHostException{
 		// Leemos el primer parámetro, donde debe ir la dirección
 		// IP del servidor
-		InetAddress direcc = null;
+		InetAddress direcc =null ;
+		
 		try{
-			direcc = InetAddress.getByName(args[0]);
+			direcc = InetAddress.getByName(InetAddress.getLocalHost().getHostAddress());
 			System.out.println("Direccion : "+ direcc);
 		}catch(UnknownHostException uhe){
 			System.err.println("Host no encontrado : " + uhe);
