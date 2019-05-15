@@ -6,10 +6,9 @@ class ClienteTCP{
 	public static void main(String args[]) throws UnknownHostException{
 		// Leemos el primer parámetro, donde debe ir la dirección
 		// IP del servidor
-		InetAddress direcc =null ;
-		
+		InetAddress direcc =null;
 		try{
-			direcc = InetAddress.getByName(InetAddress.getLocalHost().getHostAddress());
+			direcc = InetAddress.getLocalHost();
 			System.out.println("Direccion : "+ direcc);
 		}catch(UnknownHostException uhe){
 			System.err.println("Host no encontrado : " + uhe);
@@ -25,7 +24,7 @@ class ClienteTCP{
 			DataOutputStream dos = null;
 			try{
 				// Convertimos el texto en número
-				int numero = Integer.parseInt(args[n]);
+				int numero = 5;
 				// Creamos el Socket
 				sckt = new Socket(direcc,puerto);
 				System.out.println(sckt);

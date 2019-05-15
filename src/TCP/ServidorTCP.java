@@ -7,7 +7,7 @@ class ServidorTCP{
 		// Primero indicamos la dirección IP local
 		InetAddress direcc =null;
 		try {
-			direcc = InetAddress.getLocalHost();
+			direcc = InetAddress.getByName("localhost");
 		} catch (UnknownHostException e1) {
 			e1.printStackTrace();
 		}
